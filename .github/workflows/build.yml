@@ -33,7 +33,7 @@ jobs:
     - name: build it for raspberry pi
       if: matrix.platform == 'ubuntu-latest'
       run: |
-        sudo apt install gcc-arm-linux-gnueabihf
+        sudo apt install gcc-arm-linux-gnueabihf libdbus-1-dev pkg-config pkg-config-arm-linux-gnueabihf
         rustup target add armv7-unknown-linux-gnueabihf
         cargo tauri build -t armv7-unknown-linux-gnueabihf
 
