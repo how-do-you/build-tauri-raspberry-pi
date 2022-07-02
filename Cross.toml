@@ -1,5 +1,5 @@
 [target.armv7-unknown-linux-gnueabihf]
-image = "rustcross/armv7-unknown-linux-gnueabihf"
+image = "rustcross:dbus-armhf"
 
 [build.env]
 passthrough = [
