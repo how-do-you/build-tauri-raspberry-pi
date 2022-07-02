@@ -1,10 +1,10 @@
-# Base image for rapsberrypi 3 target
 FROM rustembedded/cross:armv7-unknown-linux-gnueabihf
 
 RUN dpkg --add-architecture armhf && \
             apt update && \
             apt upgrade -y && \
-            apt install -y apt-utils
+            apt install -y apt-utils apt-transport-https
+RUN apt update
 RUN apt install -y libdbus-1-dev:armhf
 RUN apt install -y pkg-config
 RUN apt install -y python2.7-minimal:armhf
