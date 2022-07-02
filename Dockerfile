@@ -4,7 +4,8 @@ FROM rustembedded/cross:armv7-unknown-linux-gnueabihf
 # Install libdbus libraries and pkg-config
 RUN dpkg --add-architecture armhf && \
             apt update && \
-            apt upgrade -y
+            apt upgrade -y && \
+            apt install -y apt-utils
 RUN apt install -y libdbus-1-dev:armhf
 RUN apt install -y pkg-config 
 RUN apt install -y python2.7-minimal
