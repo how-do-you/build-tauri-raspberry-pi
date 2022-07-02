@@ -16,3 +16,4 @@ RUN apt install -y libatspi2.0-dev:armhf
 RUN apt install -y libatspi2.0-dev:armhf
 RUN apt install -y libmirclient-dev:armhf
 RUN apt install -y libgtk-3-dev:armhf
+RUN apt install -y libglib2.0-dev libglib2.0-dev:armhf libglib2.0-dev
