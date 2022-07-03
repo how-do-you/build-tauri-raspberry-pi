@@ -32,8 +32,6 @@ jobs:
 #    - name: build it
 #      run: cargo tauri build
 
-    - name: build docker image
-      run: docker system prune && docker build --no-cache -t rustcross:dbus-armhf .
     - name: build it for raspberry pi
       if: matrix.platform == 'ubuntu-latest'
       run: |
